@@ -1,0 +1,22 @@
+name: Build Chip
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  exporter:
+    runs-on: ubuntu-22.04
+    name: Build
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Build chip
+        uses: wokwi/wokwi-chip-clang-action@main
+        with:
+          sources: "src/main.c"
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: chip
+          path: dist/chip.wasm

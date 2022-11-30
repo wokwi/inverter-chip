@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "Inverter",
+  "author": "Uri Shaked",
+  "license": "MIT",
+  "pins": [
+    "OUT",
+    "IN",
+    "VCC",
+    "GND"
+  ]
+}
