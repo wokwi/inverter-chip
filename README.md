@@ -1,3 +1,13 @@
 # Inverter Chip example
 
 Example of a basic custom chip for [Wokwi](https://wokwi.com/).
+
+The actual source code for the chip lives in [src/main.c](src/main.c), and the pins are described in [chip.json](chip.json).
+
+## Building
+
+The easiest way to build the project is to open it inside a Visual Studio Code dev container, and then run the `make` command.
+
+## Testing
+
+You can test this project using the Wokwi extension for Visual Studio Code. Open the project with Visual Studio Code, press "F1" and select "Wokwi: Start Simulator".
