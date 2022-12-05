@@ -15,8 +15,12 @@ jobs:
         uses: wokwi/wokwi-chip-clang-action@main
         with:
           sources: "src/main.c"
-      - name: 'Upload Artifact'
+      - name: Copy chip.json
+        run: sudo cp chip.json dist
+      - name: 'Upload Artifacts'
         uses: actions/upload-artifact@v3
         with:
           name: chip
-          path: dist/chip.wasm
+          path: |
+            dist/chip.json
+            dist/chip.wasm
