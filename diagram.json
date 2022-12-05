@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -57, "left": -0.6, "attrs": {} },
+    { "type": "chip-inverter", "id": "chip1", "top": -94.98, "left": 292.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -168.25,
+      "left": 199.91,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -168.98,
+      "left": 256.43,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "chip1:IN", "uno:2", "green", [] ],
+    [ "chip1:OUT", "led2:A", "blue", [] ],
+    [ "uno:GND.1", "led1:C", "black", [ "v0" ] ],
+    [ "uno:2", "led1:A", "green", [ "v0" ] ],
+    [ "uno:GND.1", "led2:C", "black", [ "v-55.43", "h154.13" ] ],
+    [ "uno:VIN", "chip1:VCC", "red", [ "v28.7", "h234.5", "v-240" ] ],
+    [ "chip1:GND", "uno:GND.3", "black", [ "h30.61", "v259.2", "h-259.2" ] ]
+  ]
+}

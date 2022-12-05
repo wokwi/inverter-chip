@@ -1,0 +1,7 @@
+[wokwi]
+elf = 'test/release/firmware.elf'
+firmware = 'test/release/firmware.hex'
+
+[[chip]]
+name = 'inverter'
+binary = 'dist/chip.wasm'
