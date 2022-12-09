@@ -20,3 +20,6 @@ $(TARGET): dist $(SOURCES) src/wokwi-api.h
 dist/chip.json: dist chip.json
 	  cp chip.json dist
 
+.PHONY: test
+test:
+	  cd test && arduino-cli compile -e -b arduino:avr:uno blink
