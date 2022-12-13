@@ -3,6 +3,7 @@
   "name": "Inverter",
   "author": "Uri Shaked",
   "license": "MIT",
+  "docs": "https://github.com/wokwi/inverter-chip/blob/main/docs/README.md",
   "pins": [
     "OUT",
     "IN",
