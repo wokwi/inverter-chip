@@ -1,4 +1,11 @@
 {
   "name": "Wokwi-chips clang + Platform IO",
-	"dockerFile": "Dockerfile"
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Wokwi.wokwi-vscode"
+			]
+		}
+	}
 }
