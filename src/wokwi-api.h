@@ -128,8 +128,8 @@ static uint64_t get_sim_nanos(void) {
 
 typedef uint32_t buffer_t;
 extern __attribute__((import_name("framebufferInit"))) buffer_t framebuffer_init(uint32_t *pixel_width, uint32_t *pixel_height);
-extern __attribute__((import_name("bufferRead"))) void buffer_read(buffer_t buffer, uint32_t offset, uint8_t *data, uint8_t data_len);
-extern __attribute__((import_name("bufferWrite"))) void buffer_write(buffer_t buffer, uint32_t offset, uint8_t *data, uint8_t data_len);
+extern __attribute__((import_name("bufferRead"))) void buffer_read(buffer_t buffer, uint32_t offset, uint8_t *data, uint32_t data_len);
+extern __attribute__((import_name("bufferWrite"))) void buffer_write(buffer_t buffer, uint32_t offset, uint8_t *data, uint32_t data_len);
 
 #ifdef __cplusplus
 }
